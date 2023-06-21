@@ -1,3 +1,46 @@
+function getPlayerChoice () {
+    let sign = prompt("Enter Rock, Paper or Scissors");
+}
+
+
+// get player selection to play the game
+let playerSelection = prompt("Enter Rock, Paper or Scissors");
+// the prompt to lowercase
+playerSelection = playerSelection.toLocaleLowerCase(); 
+console.log(playerSelection);
+
+let computerSelection = getComputerChoice();
+
+if (playerSelection === "rock") {
+
+    if (computerSelection === "rock" ) {
+        console.log("Draw!");
+    }
+    if (computerSelection === "paper" ) {
+        console.log("You loose!");
+    }
+    if (computerSelection === "scissors" ) {
+        console.log("You win!");
+    }
+} else if (playerSelection === "paper") {
+
+    if (computerSelection === "rock" ) {
+        console.log("You win!");
+    }
+    if (computerSelection === "paper" ) {
+        console.log("Draw!");
+    }
+    if (computerSelection === "scissors" ) {
+        console.log("You loose!");
+    }
+}
+    
+
+
+
+
+
+
 function getComputerChoice () {
    let randomNumber = Math.floor(Math.random() * 10); // give random numbers 0-9
 
@@ -5,16 +48,15 @@ function getComputerChoice () {
 
    // if for geeting the numbers to say random r/p/s
    if (randomNumber >= 0 && randomNumber < 4) {
-    hand = "Paper";
+    hand = "paper";
    } else if (randomNumber < 7) {
-    hand = "Rock";
+    hand = "rock";
    } else
-    hand = "Scissors";
+    hand = "scissors";
 
-   console.log(randomNumber);
-
-   console.log(hand);
+    return hand;
 };
+
 
 
 console.log(getComputerChoice());
