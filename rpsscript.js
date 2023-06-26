@@ -57,6 +57,27 @@ function getComputerChoice () {
     return hand;
 };
 
-
+//second function
 
 console.log(getComputerChoice());
+
+
+function getComputerChoice () {
+    let randomNumber = Math.floor(Math.random() * 10); // give random numbers 0-9
+ 
+    let hand = ""; // variable declared for rock/paper/scissors
+ 
+    // if for geeting the numbers to say random r/p/s
+    if (randomNumber >= 0 && randomNumber < 4) {
+     hand = "paper";
+    } else if (randomNumber < 7) {
+     hand = "rock";
+    } else
+     hand = "scissors";
+ 
+     return hand;
+ };
+ 
+ 
+ 
+ console.log(getComputerChoice());
